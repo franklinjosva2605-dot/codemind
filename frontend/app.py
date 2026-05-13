@@ -175,7 +175,7 @@ with st.sidebar:
 
     # API Key
     st.markdown("**🔑 Gemini API Key**")
-    api_key = st.text_input("", type="password",
+    #api_key = st.text_input("", type="password",
         placeholder="Paste your Gemini API key",
         key="api_key_input",
         label_visibility="collapsed")
