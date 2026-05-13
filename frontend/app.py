@@ -179,7 +179,7 @@ with st.sidebar:
     #placeholder="Paste your Gemini API key",
     #key="api_key_input",
         #label_visibility="collapsed")
-	api_key = st.secrets["GEMINI_API_KEY"]
+api_key = st.secrets["GEMINI_API_KEY"]
     if api_key:
         os.environ["GEMINI_API_KEY"] = api_key
         import google.generativeai as genai
