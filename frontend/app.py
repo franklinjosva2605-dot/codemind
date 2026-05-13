@@ -185,7 +185,7 @@ if api_key:
         import google.generativeai as genai
         genai.configure(api_key=api_key)
 
-    st.markdown("---")
+st.markdown("---")
 
     # Stats
 stats = get_index_stats()
@@ -198,7 +198,7 @@ with col1:
             <div class="stat-num">{stats['total_chunks']}</div>
             <div class="stat-label">Chunks Indexed</div>
         </div>""", unsafe_allow_html=True)
-    with col2:
+with col2:
         st.markdown(f"""
         <div class="stat-card">
             <div class="stat-num">{len(stats['sources'])}</div>
@@ -258,14 +258,14 @@ if stats["sources"]:
                 📄 {src}
             </div>""", unsafe_allow_html=True)
 
-    st.markdown("---")
-    if st.button("🗑️ Clear Chat"):
+st.markdown("---")
+if st.button("🗑️ Clear Chat"):
         st.session_state.chat_history = []
         st.rerun()
 
-    st.markdown("---")
-    st.caption("Built for Lablab.ai Enterprise AI Hackathon 2026")
-    st.caption("Powered by Gemini 1.5 Flash + ChromaDB")
+st.markdown("---")
+st.caption("Built for Lablab.ai Enterprise AI Hackathon 2026")
+st.caption("Powered by Gemini 1.5 Flash + ChromaDB")
 
 # ── Main Area ─────────────────────────────────────────────────────────────────
 st.markdown("## 🧠 CodeMind — Enterprise Codebase Intelligence")
