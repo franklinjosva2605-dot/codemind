@@ -10,8 +10,8 @@ from pathlib import Path
 from typing import List, Dict, Any
 
 import google.generativeai as genai
-import chromadb
-from chromadb.config import Settings
+#import chromadb
+#from chromadb.config import Settings
 import PyPDF2
 
 # ── Config ────────────────────────────────────────────────────────────────────
