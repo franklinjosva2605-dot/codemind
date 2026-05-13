@@ -188,11 +188,11 @@ if api_key:
     st.markdown("---")
 
     # Stats
-    stats = get_index_stats()
-    st.session_state.index_stats = stats
+stats = get_index_stats()
+st.session_state.index_stats = stats
 
-    col1, col2 = st.columns(2)
-    with col1:
+col1, col2 = st.columns(2)
+with col1:
         st.markdown(f"""
         <div class="stat-card">
             <div class="stat-num">{stats['total_chunks']}</div>
@@ -205,13 +205,13 @@ if api_key:
             <div class="stat-label">Files Indexed</div>
         </div>""", unsafe_allow_html=True)
 
-    st.markdown("---")
+st.markdown("---")
 
     # File Upload
-    st.markdown("**📁 Upload Codebase Files**")
-    st.caption("Supports: .py .js .ts .go .java .md .txt .pdf .yaml .json .html .css .env .sh")
+st.markdown("**📁 Upload Codebase Files**")
+st.caption("Supports: .py .js .ts .go .java .md .txt .pdf .yaml .json .html .css .env .sh")
 
-    uploaded_files = st.file_uploader(
+uploaded_files = st.file_uploader(
         "Drop files here",
         accept_multiple_files=True,
         type=["py","js","ts","go","java","md","txt","pdf",
@@ -220,9 +220,9 @@ if api_key:
         label_visibility="collapsed"
     )
 
-    reset_index = st.checkbox("🔄 Reset existing index", value=False)
+reset_index = st.checkbox("🔄 Reset existing index", value=False)
 
-    if st.button("⚡ Index Files", disabled=not uploaded_files):
+if st.button("⚡ Index Files", disabled=not uploaded_files):
         if not api_key:
             st.error("Please enter your Gemini API key first!")
         else:
@@ -247,10 +247,10 @@ if api_key:
                 except Exception as e:
                     st.error(f"Error: {e}")
 
-    st.markdown("---")
+st.markdown("---")
 
     # Indexed files list
-    if stats["sources"]:
+if stats["sources"]:
         st.markdown("**📂 Indexed Files**")
         for src in stats["sources"]:
             st.markdown(f"""
@@ -371,7 +371,6 @@ if (send or query) and query.strip():
                 st.rerun()
             except Exception as e:
                 st.error(f"Error generating answer: {e}")
-
 # ── Bottom Info ────────────────────────────────────────────────────────────────
 st.markdown("---")
 col1, col2, col3 = st.columns(3)
