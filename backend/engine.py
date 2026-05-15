@@ -13,8 +13,6 @@ import google.generativeai as genai
 import chromadb
 from chromadb.config import Settings
 # Triggering a rebuild for chromadb
-#import chromadb 
-import Settings
 import pypdf
 
 # ── Config ────────────────────────────────────────────────────────────────────
