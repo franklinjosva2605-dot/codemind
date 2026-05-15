@@ -6,9 +6,13 @@ Streamlit Frontend
 import os
 import sys
 import streamlit as st
+#keep your path fix
+sys.path.insert(0, os.path
+.dirname(os.path.dirname(__file__)))
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
-from backend.engine import index_files, answer_query, get_index_stats
+#fix: combined into one line
+from backend.engine import index_files, 
+answer_query, get_index_stats
 
 # ── Page Config ───────────────────────────────────────────────────────────────
 st.set_page_config(

@@ -7,3 +7,4 @@ PyPDF2==3.0.1
 pygments==2.18.0
 langchain-text-splitters==0.3.4
 tokenizers
+chromadb
