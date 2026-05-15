@@ -11,7 +11,7 @@ import streamlit as st
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Import backend functions (Make sure "from" starts on a new line)
-from backend.engine import index_files, answer_query, get_index_stats
+from backend.engine import index_files answer_query get_index_stats
 
 # ── Page Config ───────────────────────────────────────────────────────────────
 st.set_page_config(
