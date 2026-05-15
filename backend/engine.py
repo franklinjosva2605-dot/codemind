@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import List, Dict, Any
 
 import google.generativeai as genai
-from chromadb import chromadb.config
+from chromadb import config
 # Triggering a rebuild for chromadb
 #import chromadb 
 import Settings
