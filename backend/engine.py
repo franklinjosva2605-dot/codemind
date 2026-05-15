@@ -9,10 +9,10 @@ import re
 from pathlib import Path
 from typing import List, Dict, Any
 
-import google.generativeai as genai
 import chromadb
 from chromadb.config import Settings
 import pypdf
+import google.generativeai as genai
 
 # ── Config ────────────────────────────────────────────────────────────────────
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "YOUR_GEMINI_API_KEY_HERE")

@@ -3,7 +3,7 @@ streamlit==1.41.0
 fastapi==0.115.6
 uvicorn==0.32.1
 python-multipart==0.0.20
-pypdf==3.0.1
+pypdf==6.11.0
 pygments==2.18.0
 langchain-text-splitters==0.3.4
 tokenizers
