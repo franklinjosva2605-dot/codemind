@@ -11,11 +11,11 @@ from typing import List, Dict, Any
 
 import google.generativeai as genai
 import chromadb
-from chromadb config import settings
+from chromadb.config import Settings
 # Triggering a rebuild for chromadb
 #import chromadb 
 import Settings
-import PyPDF2
+import pypdf
 
 # ── Config ────────────────────────────────────────────────────────────────────
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "YOUR_GEMINI_API_KEY_HERE")
